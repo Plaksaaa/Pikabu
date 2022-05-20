@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/pikabu
+  jpa:
+    properties.hibernate:
+      batch_size: 50
+      fetch_size: 50
+      show_sql: true
+      format_sql: true
+      hbm2ddl.auto: validate
+      open-in-view: false
+jwt:
+  secret: kdnsfkjdjksbfknbkjsnafgjlknskajngkjsdkljgkhjgnjfjgnjfshjskdhgjnfklnjkbrjhfgernguiehpgvjnslkfnvjkrfgnnvjsdfgfagsdafsdfsadfasdfsadfsadfsadfsadfasdfasdfasdfasdfadsfsdfasdfsadfsadfsadf
+  key: ${SIGN_KEY:DEV-JWT-SIGN-KEY_DEV-JWT-SIGN-KEY_DEV-JWT-SIGN-KEY_DEV-JWT-SIGN-KEY}
+  token-header: Authorization
+  token-prefix: "Bearer "
+  token-issuer: Plaxa
+  expiration:
+    time: 1000000
+
+firebase:
+  bucket: pikabu-by-plaxa.appspot.com
+  json-path: /Users/maksimplaksa/Downloads/pikabu-by-plaxa-firebase-adminsdk-9zxot-21ca751733.json
+  download-url: https://firebasestorage.googleapis.com/v0/b/pikabu by plaxa/o/%s?alt=media
+  download-to: /Users/maksimplaksa/Downloads/
